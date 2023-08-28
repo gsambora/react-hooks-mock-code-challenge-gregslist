@@ -1,16 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import Search from "./Search";
 
-function Header() {
+function Header({handleFilterListing, handlePeaceClick}) {
   return (
     <header>
-      <h1>
+      <h1 onClick={handlePeaceClick}>
         <span className="logo" role="img">
           ☮
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search onSearch={handleFilterListing}/>
     </header>
   );
 }
